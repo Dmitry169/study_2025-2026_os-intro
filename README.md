@@ -471,3 +471,4 @@ git clone --recursive https://github.com/yamadharma/course-directory-student-tem
 [![VKvideo](https://sun1-86.userapi.com/X4ozpnObDzOszkmLpm2NpauUx075QbpjA6fVGg/pOVZsIv3Ees.jpg)](https://vkvideo.ru/video-230024722_456239047)
 
 [![Youtube](http://img.youtube.com/vi/39bu5avPoDU/0.jpg)](http://www.youtube.com/watch?v=39bu5avPoDU)
+demo feature line

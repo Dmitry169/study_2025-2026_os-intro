@@ -21,111 +21,121 @@ license: "CC BY"
 
 - Установить Fedora Sway на VirtualBox, настроить SELinux, раскладку клавиатуры, имя пользователя и хоста.
 
+# Теоретическое введение
+
+Для изоляции экспериментов с операционной системой от основной рабочей машины используется виртуализация: виртуальная машина эмулирует отдельный компьютер со своими процессором, памятью, диском и сетевой картой, работая поверх гипервизора (в данном случае VirtualBox). Fedora — дистрибутив Linux, Sway — компактный тайловый оконный менеджер для Wayland. SELinux реализует мандатное управление доступом (MAC) поверх обычных прав Unix.
+
 # Выполнение лабораторной работы
 
 Скачиваем VirtualBox с официального сайта.
 
-![](фото/1.png){width=70%}
+![Скачиваем VirtualBox с официального сайта](фото/1.png){width=70%}
 
 Скачиваем образ Fedora Sway Spin 44.
 
-![](фото/2.png){width=70%}
+![Скачиваем образ Fedora Sway Spin 44](фото/2.png){width=70%}
 
 VirtualBox установлен, менеджер готов к работе.
 
-![](фото/3.png){width=70%}
+![VirtualBox установлен, менеджер готов к работе](фото/3.png){width=70%}
 
 Настраиваем параметры виртуальной машины.
 
-![](фото/4.png){width=70%}
+![Настраиваем параметры виртуальной машины](фото/4.png){width=70%}
 
 Задаём объём памяти и число CPU при создании ВМ.
 
-![](фото/5.png){width=70%}
+![Задаём объём памяти и число CPU при создании ВМ](фото/5.png){width=70%}
 
 Выбираем язык установки в установщике Fedora.
 
-![](фото/6.png){width=70%}
+![Выбираем язык установки в установщике Fedora](фото/6.png){width=70%}
 
 Инструкция по запуску установщика на Live-рабочем столе.
 
-![](фото/7.png){width=70%}
+![Инструкция по запуску установщика на Live-рабочем столе](фото/7.png){width=70%}
 
 Первый вход в систему после установки, сессия Sway.
 
-![](фото/8.png){width=70%}
+![Первый вход в систему после установки, сессия Sway](фото/8.png){width=70%}
 
 Рабочий стол Fedora после входа.
 
-![](фото/9.png){width=70%}
+![Рабочий стол Fedora после входа](фото/9.png){width=70%}
 
 Устанавливаем средства разработки: `sudo dnf -y group install development-tools`.
 
-![](фото/10.png){width=70%}
+![Устанавливаем средства разработки: `sudo dnf -y group install development-tools`](фото/10.png){width=70%}
 
 Обновляем систему: `sudo dnf -y update`.
 
-![](фото/11.png){width=70%}
+![Обновляем систему: `sudo dnf -y update`](фото/11.png){width=70%}
 
 Устанавливаем dnf-automatic: `sudo dnf -y install dnf-automatic`.
 
-![](фото/12.png){width=70%}
+![Устанавливаем dnf-automatic: `sudo dnf -y install dnf-automatic`](фото/12.png){width=70%}
 
 Устанавливаем tmux и mc: `sudo dnf -y install tmux mc`.
 
-![](фото/13.png){width=70%}
+![Устанавливаем tmux и mc: `sudo dnf -y install tmux mc`](фото/13.png){width=70%}
 
 Переключаемся на суперпользователя: `sudo -i`.
 
-![](фото/14.png){width=70%}
+![Переключаемся на суперпользователя: `sudo -i`](фото/14.png){width=70%}
 
 Включаем таймер автообновления: `sudo systemctl enable --now dnf-automatic.timer`.
 
-![](фото/15.png){width=70%}
+![Включаем таймер автообновления: `sudo systemctl enable --now dnf-automatic.timer`](фото/15.png){width=70%}
 
 Просматриваем файл /etc/selinux/config.
 
-![](фото/16.png){width=70%}
+![Просматриваем файл /etc/selinux/config](фото/16.png){width=70%}
 
 Меняем SELINUX=enforcing на SELINUX=permissive.
 
-![](фото/17.png){width=70%}
+![Меняем SELINUX=enforcing на SELINUX=permissive](фото/17.png){width=70%}
 
 Перезагружаем ВМ: `sudo systemctl reboot`.
 
-![](фото/18.png){width=70%}
+![Перезагружаем ВМ: `sudo systemctl reboot`](фото/18.png){width=70%}
 
 Создаём конфиг раскладки клавиатуры для Sway.
 
-![](фото/19.png){width=70%}
+![Создаём конфиг раскладки клавиатуры для Sway](фото/19.png){width=70%}
 
 Редактируем конфиг sway и снова заходим под sudo -i.
 
-![](фото/20.png){width=70%}
+![Редактируем конфиг sway и снова заходим под sudo -i](фото/20.png){width=70%}
 
 Редактируем /etc/X11/xorg.conf.d/00-keyboard.conf (раскладки us,ru).
 
-![](фото/21.png){width=70%}
+![Редактируем /etc/X11/xorg.conf.d/00-keyboard.conf (раскладки us,ru)](фото/21.png){width=70%}
 
 Меняем имя пользователя и хоста: adduser, passwd, hostnamectl.
 
-![](фото/22.png){width=70%}
+![Меняем имя пользователя и хоста: adduser, passwd, hostnamectl](фото/22.png){width=70%}
 
 Устанавливаем pandoc: `sudo dnf -y install pandoc`.
 
-![](фото/23.png){width=70%}
+![Устанавливаем pandoc: `sudo dnf -y install pandoc`](фото/23.png){width=70%}
 
 Устанавливаем TeX Live для сборки отчётов.
 
-![](фото/24.png){width=70%}
+![Устанавливаем TeX Live для сборки отчётов](фото/24.png){width=70%}
 
 Смотрим вывод dmesg для домашнего задания: `dmesg | less`.
 
-![](фото/25.png){width=70%}
+![Смотрим вывод dmesg для домашнего задания: `dmesg | less`](фото/25.png){width=70%}
 
 # Выводы
 
 Установлена и настроена Fedora Sway на виртуальной машине: обновлена система, настроены автообновление, SELinux, раскладка клавиатуры, имя пользователя и хоста, установлено ПО для подготовки отчётов.
+
+# Список литературы{.unnumbered}
+
+1. VirtualBox User Manual. — Oracle Corporation, 2025.
+2. Fedora Project Documentation. Sway Spin. — Fedora Project, 2025.
+3. SELinux User's and Administrator's Guide. — Red Hat, Inc.
 
 # Ответы на контрольные вопросы{.unnumbered}
 

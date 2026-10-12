@@ -1,0 +1,47 @@
+# Команды, использованные в лабораторной работе № 2
+# Первоначальная настройка git
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+sudo dnf install git
+sudo dnf install gh
+ssh-keygen -t ed25519
+wl-copy < ~/.ssh/id_ed25519.pub
+gpg --full-generate-key
+user.signingkey
+commit.gpgsign
+gpg.program
+gh auth login
+gh repo create study_2025-2026_os-intro --template=yamadharma/course-directory-student-template --public
+git clone --recursive
+package.json
+COURSE
+git add .
+git commit -am 'feat(main): make course structure'
+git push
+init
+status
+diff
+add
+commit
+pull
+add
+commit
+push
+init
+status
+diff
+add
+rm
+commit
+pull
+push
+checkout
+merge
+branch
+init
+add
+commit
+clone
+pull
+push
+.gitignore

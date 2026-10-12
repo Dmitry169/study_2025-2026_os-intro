@@ -27,58 +27,67 @@ license: "CC BY"
 - Просмотреть содержимое системного файла со списком пользователей.
 - Изучить справку по командам 'mount', 'fsck', 'mkfs', 'kill'.
 
+# Теоретическое введение
+
+Файловая система определяет способ организации и хранения файлов на носителе (ext4, xfs, btrfs и др.). Права доступа в Unix задаются для трёх категорий — владельца, группы и остальных — и для каждой из трёх операций: чтение, запись, выполнение; восьмеричная запись кодирует все девять бит одним числом.
+
 # Выполнение лабораторной работы
 
 Копируем файл '/usr/include/sys/io.h' в домашний каталог под именем 'equipment': 'cp /usr/include/sys/io.h equipment'.
 
-![](фото/1.png){width=70%}
+![Копируем файл '/usr/include/sys/io.h' в домашний каталог под именем 'equipment': 'cp /usr/include/sys/io.h equipment'](фото/1.png){width=70%}
 
 Создаём каталог 'ski.plases' и перемещаем в него 'equipment': 'mkdir ski.plases', 'mv equipment ski.plases/'.
 
-![](фото/2.png){width=70%}
+![Создаём каталог 'ski.plases' и перемещаем в него 'equipment': 'mkdir ski.plases', 'mv equipment ski.plases/'](фото/2.png){width=70%}
 
 Переименовываем 'equipment' в 'equiplist': 'mv ski.plases/equipment ski.plases/equiplist'.
 
-![](фото/3.png){width=70%}
+![Переименовываем 'equipment' в 'equiplist': 'mv ski.plases/equipment ski.plases/equiplist'](фото/3.png){width=70%}
 
 Создаём каталог 'abc1' и копируем туда 'equiplist' под именем 'equiplist2': 'mkdir abc1', 'cp ski.plases/equiplist abc1/equiplist2'.
 
-![](фото/4.png){width=70%}
+![Создаём каталог 'abc1' и копируем туда 'equiplist' под именем 'equiplist2': 'mkdir abc1', 'cp ski.plases/equiplist abc1/equiplist2'](фото/4.png){width=70%}
 
 Создаём подкаталог 'equipment' внутри 'ski.plases' и перемещаем туда оба файла: 'mkdir ski.plases/equipment', 'mv ski.plases/equiplist ski.plases/equipment/', 'mv abc1/equiplist2 ski.plases/equipment/'.
 
-![](фото/5.png){width=70%}
+![Создаём подкаталог 'equipment' внутри 'ski.plases' и перемещаем туда оба файла: 'mkdir ski.plases/equipment', 'mv ski.plases/equiplist ski.plases/equipment/', 'mv abc1/equiplist2 ski.plases/equipment/'](фото/5.png){width=70%}
 
 Создаём каталог 'newdir' и перемещаем его в 'ski.plases' под именем 'plans': 'mkdir newdir', 'mv newdir ski.plases/plans'.
 
-![](фото/6.png){width=70%}
+![Создаём каталог 'newdir' и перемещаем его в 'ski.plases' под именем 'plans': 'mkdir newdir', 'mv newdir ski.plases/plans'](фото/6.png){width=70%}
 
 Создаём каталог 'australia' и устанавливаем права 'drwxr--r--': 'mkdir australia', 'chmod 744 australia'.
 
-![](фото/7.png){width=70%}
+![Создаём каталог 'australia' и устанавливаем права 'drwxr--r--': 'mkdir australia', 'chmod 744 australia'](фото/7.png){width=70%}
 
 Создаём каталог 'play' и устанавливаем права 'drwx--x--x': 'mkdir play', 'chmod 711 play'.
 
-![](фото/8.png){width=70%}
+![Создаём каталог 'play' и устанавливаем права 'drwx--x--x': 'mkdir play', 'chmod 711 play'](фото/8.png){width=70%}
 
 Создаём файл 'my_os' и устанавливаем права '-r-xr--r--': 'touch my_os', 'chmod 544 my_os'.
 
-![](фото/9.png){width=70%}
+![Создаём файл 'my_os' и устанавливаем права '-r-xr--r--': 'touch my_os', 'chmod 544 my_os'](фото/9.png){width=70%}
 
 Создаём файл 'feathers' и устанавливаем права '-rw-rw-r--': 'touch feathers', 'chmod 664 feathers'.
 
-![](фото/10.png){width=70%}
+![Создаём файл 'feathers' и устанавливаем права '-rw-rw-r--': 'touch feathers', 'chmod 664 feathers'](фото/10.png){width=70%}
 
 Просматриваем содержимое системного файла со списком пользователей: 'cat /etc/passwd'.
 
-![](фото/11.png){width=70%}
+![Просматриваем содержимое системного файла со списком пользователей: 'cat /etc/passwd'](фото/11.png){width=70%}
 
 Изучаем справку по командам монтирования, проверки файловой системы, создания файловой системы и управления процессами: 'man mount', 'man fsck', 'man mkfs', 'man kill'.
 
-![](фото/12.png){width=70%}
+![Изучаем справку по командам монтирования, проверки файловой системы, создания файловой системы и управления процессами: 'man mount', 'man fsck', 'man mkfs', 'man kill'](фото/12.png){width=70%}
 
 # Выводы
 Получены практические навыки работы с файловой системой Linux: копирование, перемещение и переименование файлов и каталогов, назначение прав доступа через восьмеричную запись 'chmod', просмотр системных файлов, а также знакомство со средствами монтирования и проверки целостности файловой системы через 'man'.
+
+# Список литературы{.unnumbered}
+
+1. Linux Filesystem Hierarchy Standard (FHS) 3.0.
+2. chmod(1), mount(8), fsck(8) — Linux man-pages project.
 
 # Ответы на контрольные вопросы{.unnumbered}
 

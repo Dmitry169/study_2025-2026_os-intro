@@ -1,0 +1,52 @@
+# Команды, использованные в лабораторной работе № 4
+# Продвинутое использование git
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+gitflow
+dnf copr enable elegos/gitflow
+dnf install gitflow
+commitizen
+dnf install nodejs
+dnf install pnpm
+pnpm setup
+source ~/.bashrc
+pnpm add -g commitizen
+standard-changelog
+pnpm add -g standard-changelog
+mkdir ~/git-extended && cd ~/git-extended
+git init -b master
+echo "test" > readme.txt
+git add readme.txt
+pnpm add -g cz-conventional-changelog
+package.json
+pnpm init
+package.json
+config.commitizen
+cz-conventional-changelog
+repository
+author
+git commit
+git add .
+git cz
+feat
+git push
+git flow init
+v
+git branch
+git push --all
+git flow release start 1.0.0
+standard-changelog --first-release
+CHANGELOG.md
+git flow release finish 1.0.0
+Release 1.0.0
+git push --all
+git push --tags
+gh release create v1.0.0 -F CHANGELOG.md
+git flow feature start feature_branch
+git flow feature finish feature_branch
+git flow release start 1.2.3
+Release 1.2.3
+git flow release finish 1.2.3
+git push --all
+git push --tags
+gh release create v1.2.3 -F CHANGELOG.md

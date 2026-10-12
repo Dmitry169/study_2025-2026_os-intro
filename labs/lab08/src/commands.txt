@@ -1,0 +1,61 @@
+# Команды, использованные в лабораторной работе № 8
+# Поиск файлов, перенаправление ввода-вывода, управление процессами
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+/etc
+.conf
+/etc
+log
+kill
+find
+/etc
+ls /etc ~ > file.txt
+.conf
+grep .conf file.txt > conf.txt
+, двумя способами: 
+ и 
+/etc
+: 
+logfile
+log
+find / -iname "*log*" > ~/logfile 2>/dev/null &
+jobs
+logfile
+rm ~/logfile
+firefox --new-instance &
+ps
+grep
+ps aux | grep firefox
+pgrep
+pgrep -x firefox
+kill
+man kill
+kill 27721
+df
+du
+man df
+df -h
+man du
+du -sh ~
+find
+find ~ -maxdepth 1 -type d
+find
+grep
+kill
+df
+du
+ и 
+ перезаписывает файл заново (стирая содержимое), 
+, передающий вывод одной команды на вход другой без промежуточного файла, например 
+). Список заданий - 
+, завершение - 
+htop
+top
+find путь -опции
+find ~ -maxdepth 1 -name "c*"
+grep
+grep -r "текст" ~
+df -h
+du -sh ~
+kill PID
+kill -9 PID

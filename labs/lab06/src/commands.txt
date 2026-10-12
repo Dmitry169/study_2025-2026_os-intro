@@ -1,0 +1,86 @@
+# Команды, использованные в лабораторной работе № 6
+# Основы интерфейса командной строки Unix
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+/tmp
+ls
+man
+ls
+cd
+pwd
+mkdir
+rmdir
+rm
+pwd
+/tmp
+ls
+cd /tmp
+ls
+ls -a
+ls -l
+/var/spool
+cron
+ls /var/spool
+cd ~
+ls -l
+newdir
+morefun
+mkdir ~/newdir
+mkdir ~/newdir/morefun
+letters
+memos
+misk
+mkdir ~/letters ~/memos ~/misk
+rmdir ~/letters ~/memos ~/misk
+newdir
+rm
+-r
+rm ~/newdir
+morefun
+rmdir ~/newdir/morefun
+man ls
+-R
+-t
+man ls
+man
+cd
+pwd
+mkdir
+rmdir
+rm
+man cd
+man pwd
+man mkdir
+man rmdir
+man rm
+history
+!335:s/newdir/~
+ls
+man
+pwd
+/home/dvsavkin
+ls -F
+ каталог, 
+ исполняемый файл, 
+ls -a
+ и 
+rm файл
+rmdir каталог
+rm -r каталог
+rm -r каталог
+rm
+-r
+history
+!&lt;номер&gt;
+!&lt;номер&gt;:s/что меняем/на что меняем
+!335:s/newdir/~
+ls newdir
+ls ~
+cd; ls
+\\
+rm файл\\\*
+ls -l
+cd ..
+cd ../work
+work
+man &lt;команда&gt;

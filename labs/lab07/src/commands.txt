@@ -1,0 +1,105 @@
+# Команды, использованные в лабораторной работе № 7
+# Анализ файловой системы Linux
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+/usr/include/sys/io.h
+equipment
+ski.plases
+equipment
+equiplist
+abc1
+equiplist
+equiplist2
+equipment
+ski.plases
+equiplist
+newdir
+ski.plases
+plans
+australia
+play
+my_os
+feathers
+mount
+fsck
+mkfs
+kill
+/usr/include/sys/io.h
+equipment
+cp /usr/include/sys/io.h equipment
+ski.plases
+equipment
+mkdir ski.plases
+mv equipment ski.plases/
+equipment
+equiplist
+mv ski.plases/equipment ski.plases/equiplist
+abc1
+equiplist
+equiplist2
+mkdir abc1
+cp ski.plases/equiplist abc1/equiplist2
+equipment
+ski.plases
+mkdir ski.plases/equipment
+mv ski.plases/equiplist ski.plases/equipment/
+mv abc1/equiplist2 ski.plases/equipment/
+newdir
+ski.plases
+plans
+mkdir newdir
+mv newdir ski.plases/plans
+australia
+drwxr--r--
+mkdir australia
+chmod 744 australia
+play
+drwx--x--x
+mkdir play
+chmod 711 play
+my_os
+-r-xr--r--
+touch my_os
+chmod 544 my_os
+feathers
+-rw-rw-r--
+touch feathers
+chmod 664 feathers
+cat /etc/passwd
+man mount
+man fsck
+man mkfs
+man kill
+chmod
+man
+ext4
+, к которому монтируются все устройства. Директории первого уровня: 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+mount
+fsck имя_устройства
+mkfs
+cat
+less
+head
+tail
+-r
+-i
+-i
+chmod
+chmod u+x файл
+chmod 744 файл

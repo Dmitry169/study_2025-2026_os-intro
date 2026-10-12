@@ -1,0 +1,36 @@
+# Команды, использованные в лабораторной работе № 1
+# Установка и конфигурация ОС на виртуальную машину
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+sudo dnf -y group install development-tools
+sudo dnf -y update
+sudo dnf -y install dnf-automatic
+sudo dnf -y install tmux mc
+sudo -i
+sudo systemctl enable --now dnf-automatic.timer
+sudo systemctl reboot
+sudo dnf -y install pandoc
+dmesg | less
+/etc/passwd
+/etc/shadow
+man
+cd
+ls -la
+du -sh
+mkdir
+rm -r
+touch
+rm
+chmod
+history
+ext4
+xfs
+btrfs
+FAT32
+NTFS
+mount
+df -h
+cat /proc/mounts
+ps aux | grep имя
+kill PID
+kill -9 PID

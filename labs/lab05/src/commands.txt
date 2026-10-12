@@ -1,0 +1,34 @@
+# Команды, использованные в лабораторной работе № 5
+# Настройка рабочей среды
+# Извлечено по порядку из report.md (последовательность команд в терминале)
+
+pass
+chezmoi
+pass
+chezmoi
+pass
+sudo -i
+dnf install pass pass-otp
+exit
+gpg --list-secret-keys
+pass init 1032252366@rudn.ru
+pass git init
+pass git remote add origin git@github.com:Dmitry169/password-store.git
+pass git push -u origin master
+master
+origin/master
+pass insert test/example
+pass test/example
+pass generate --in-place test/example
+sudo dnf -y install dunst fontawesome-fonts powerline-fonts light fuzzel swaylock kitty waybar swaybg wl-clipboard mpv grim slurp
+chezmoi
+sudo dnf copr enable peterwu/iosevka
+sudo dnf install iosevka-fonts iosevka-aile-fonts iosevka-curly-fonts iosevka-slab-fonts iosevka-etoile-fonts iosevka-term-fonts
+sh -c "$(wget -qO- chezmoi.io/get)"
+gh repo create dotfiles --template="yamadharma/dotfiles-template" --private
+chezmoi
+chezmoi init git@github.com:Dmitry169/dotfiles.git
+chezmoi diff
+chezmoi apply -v
+pass
+chezmoi
